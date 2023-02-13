@@ -147,10 +147,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="categoryNameTextField" destination="1hH-To-B4q" id="Nsz-o8-3Wf"/>
-                        <outlet property="filterSegmentedControl" destination="dep-8b-eiz" id="CoH-kq-kPu"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lnv-Lt-SHx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -246,19 +242,8 @@ Lorem Ipsum...</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Fxf-uI-ydI">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="BCk-WY-Gn5">
-                            <connections>
-                                <action selector="saveButtonTapped:" destination="RhT-1e-pN6" id="J55-6k-IiI"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="BCk-WY-Gn5"/>
                     </navigationItem>
-                    <connections>
-                        <outlet property="calorieTextField" destination="EsZ-rL-Ppu" id="Wf8-89-1ik"/>
-                        <outlet property="cookTimeTextField" destination="twu-Ol-hRa" id="YmD-5Z-kCf"/>
-                        <outlet property="isFavoriteButton" destination="yQ1-mJ-F4h" id="QnK-wB-Ac0"/>
-                        <outlet property="recipeDescriptionTextField" destination="8sr-UW-cpW" id="Or3-Pl-Dka"/>
-                        <outlet property="recipeTitleTextField" destination="Svq-r2-xLA" id="qEU-tT-cge"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r8Q-Y8-Yf0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
