@@ -37,10 +37,10 @@ class RecipeTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "RecipeCell", for: indexPath) as? RecipeTableViewCell,
         let category = category else {return UITableViewCell() }
-        
         let recipe = category.recipes[indexPath.row]
+        cell.recipe = recipe
+        cell.delegate = self // Setting the delegate - Step 7
         
-       
         return cell
     }
     
@@ -70,5 +70,16 @@ class RecipeTableViewController: UITableViewController {
         let indexPath = IndexPath(row: newRow, section: 0)
         tableView.insertRows(at: [indexPath], with: .automatic)
     }
+    
+}
+// step 5 adopt the protocol
+extension RecipeTableViewController: RecipeTableViewCellDelegate {
+    func toggleFavoriteButtonTapped(cell: RecipeTableViewCell) {
+        // step 6 implement the protocol method
+        guard let recipe = cell.recipe else {return}
+        RecipeController.toggleFavorite(recipe: recipe)
+        cell.updateViews()
+    }
+    
     
 }

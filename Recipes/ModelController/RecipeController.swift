@@ -38,4 +38,9 @@ class RecipeController {
         recipe.cookTime = cookTime
         RecipeCategoryController.shared.saveRecipesToDisk()
     }
+    
+    static func toggleFavorite(recipe: Recipe) {
+        recipe.isFavorite.toggle()
+        RecipeCategoryController.shared.saveRecipesToDisk()
+    }
 }
